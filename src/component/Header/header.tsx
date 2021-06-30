@@ -11,7 +11,7 @@ export function Header() {
             <div>
                 <ul>
                     <a href="/">
-                        <li>Website Templates</li>
+                        <li>Website</li>
                     </a>
                     <a href="#videos">
                         <li>Videos</li>

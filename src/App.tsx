@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
 
       <ToastContainer
-        position='bottom-right'
+        position='top-right'
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -29,9 +29,9 @@ function App() {
 
       <GlobalStyle />
         <Header />
-      <Switch>
-        <Route exact path="/" component={Home}/>
-      </Switch>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+          </Switch>
         <ContactForm />
         <Footer />
     </BrowserRouter>

@@ -2,17 +2,18 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
-  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction:column;
   `
 
 export const Content = styled.header`
   display: flex;
   justify-content: center;
+  height: calc(100vh - 5rem);
   align-items: center;
   position: relative;
   max-width: 1120px;
   margin: 0 auto;
-  height: 100%;
   padding: 2rem;
   
   .videoContent {
@@ -79,33 +80,95 @@ export const Content = styled.header`
       margin-bottom: -1.4rem;
     }
   }
-  `
+`
 
-export const VideoContent = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 2rem 0;
 
-  @media only screen and (max-width: 768px) {
-    flex-wrap: wrap;
+export const WebSiteContainer = styled.div`
+  background: var(--gray-100);
+
+  div{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+
+    h1{
+      width: 150px;
+    }
+    h3{
+      padding-top: 1rem;
+      text-align: justify;
+    }
+    a{
+      display: block;
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      background: var(--red);
+      padding: 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
   }
+`
 
-  .videoPlayer {
-      position: relative;
-      width: 600px;
-      height: 350px;
-      overflow: hidden;
-      background: var(--gray-900);
+export const VideosContainer = styled.div`
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(34, 0, 0, 0.8)), url('/camera.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 
-      a{
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        background: var(--red);
-        padding: 0.2rem;
+   div{
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    
+    h1{
+      color: var(--gray-100);
+      width: 150px;
+    }
+
+    div{
+      padding: 1rem 0 0 0;
+
+      small {
         color: var(--gray-100);
-        text-decoration: none;
-        font-size: 0.6rem;
+        text-align: justify;
       }
     }
-`
+  }
+
+  .videosImages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    background: yellow;
+
+    img{
+      width: 33%;
+      opacity: 0.8;
+
+     :hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      
+    }
+  }
+
+  a{
+      display: block;
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      background: var(--red);
+      padding: 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+` 

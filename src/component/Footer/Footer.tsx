@@ -14,7 +14,7 @@ export default function Footer() {
       <footer>
         <div>
           <FaEnvelope />
-          <span>doublerdigitalmedia@gmail.com</span>
+          <span>mediadigitaldoubler@gmail.com</span>
         </div>
 
         <div>

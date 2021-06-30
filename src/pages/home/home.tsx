@@ -1,11 +1,10 @@
-import ReactPlayer from 'react-player'
-import { Container, Content, VideoContent} from './styles'
-import { FaSortDown } from "react-icons/fa";
+// import ReactPlayer from 'react-player'
+import { Container, Content, VideosContainer, WebSiteContainer} from './styles'
+import { FaSortDown } from "react-icons/fa"
 
 export function Home() {
 
   return (
-    <>
     <Container>
       <Content>          
         <div className='videoContent'>
@@ -13,9 +12,10 @@ export function Home() {
           <h3>WEBSITE | SOCIAL MEDIA CONTENT | COMERCIAL | PHOTOSHOOT </h3>
           <small>BE SEEN TO BE REMEMBERED</small>
         </div>
+        
         <div className='videoPlayer'>
-          <ReactPlayer 
-            url="https://www.youtube.com/embed/P5UbFA0Ax1Q"
+          {/* <ReactPlayer 
+            url="https://www.youtube.com/watch?v=LV4EfQuesOU"
             loop={true}
             controls={false}
             muted={true}
@@ -25,10 +25,10 @@ export function Home() {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              opacity: 0.7,
               borderRadius: '180px 280px 80px 50px',
             }}
-          />
+            
+          /> */}
         </div>
         <a href="#contactForm" className="SortDown">
 
@@ -39,66 +39,38 @@ export function Home() {
 
         </a>
       </Content>
-  </Container>
+      <WebSiteContainer>
+          <div>
+            <h1>Website</h1>
+            <h3>Do you need a website? With us is simple, you choose your template and it will be done in 5 days.</h3>
+            <a href="/">
+              Read More
+            </a>
+          </div>
+      </WebSiteContainer>
 
-  <VideoContent id="videos">
-    <div className='videoPlayer'>
-      <ReactPlayer 
-        url="https://www.youtube.com/watch?v=jPlk5McbGBc"
-        loop={true}
-        controls={false}
-        muted={true}
-        playing={true}
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          opacity: 0.7,
-          borderRadius: '180px 280px 80px 50px',
-        }}
-      />
-      <a href="https://www.youtube.com/watch?v=jPlk5McbGBc" target="blank">FULL VIDEO</a>
-    </div>
-    <div className='videoPlayer'>
-      <ReactPlayer 
-        url="https://www.youtube.com/watch?v=vXLlsJcXSnI"
-        loop={true}
-        controls={false}
-        muted={true}
-        playing={true}
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          opacity: 0.7,
-          borderRadius: '180px 280px 80px 50px',
-        }}
-      />
-      <a href="https://www.youtube.com/watch?v=vXLlsJcXSnI" target="blank">FULL VIDEO</a>
-    </div>
-    <div className='videoPlayer'>
-      <ReactPlayer 
-        url="https://www.youtube.com/watch?v=qi4P_nDxI_M&t=4s"
-        loop={true}
-        controls={false}
-        muted={true}
-        playing={true}
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          opacity: 0.7,
-          borderRadius: '180px 280px 80px 50px',
-        }}
-      />
-      <a href="https://www.youtube.com/watch?v=qi4P_nDxI_M&t=4s" target="blank">FULL VIDEO</a>
-    </div>
+      <VideosContainer id='videos'> 
+        <div>
+          <h1>Videos</h1>
+          <div>
+            <small>WITH THE BEST QUALITY OF 4K FULL HD AND OVER 10 YEARS OF EXPERIENCE, WE ARE READY TO CRETE THE BEST CONTENT FOR YOUR COMPANY</small>
+          </div>
+          
+        </div>
 
-  </VideoContent>
-  </>
+        <div className='videosImages'>
+            <img src="/bullmans.jpg" alt="bullmans" />
+            <img src="/texas.jpg" alt="texas" />
+            <img src="/vanessa.jpg" alt="vanessa" />
+        </div>
+
+        <a href="/">
+            Read More
+        </a>
+      </VideosContainer>
+
+    
+    </Container>
   );
 }
 
